@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<launch>
+	
+	<include file="$(find freenect_launch)/launch/freenect.launch">
+	<arg name="depth_registration" value="true"/>
+	</include>
+	
+	<include file="$(find rtabmap_ros)/launch/rgbd_mapping.launch">
+	<arg name="rtabmap_args" value="--delete_db_on_start"/>
+	<arg name="rviz" value="true"/>
+	<arg name="rtabmapviz" value="false"/>
+	</include>
+	
+	
+
+<node pkg="slam" name="autonav_node" type="autonav_node.py" output="screen"/>
+
+
+</launch>
