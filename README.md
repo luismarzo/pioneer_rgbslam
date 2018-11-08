@@ -60,3 +60,15 @@ For odometry use Rosaria
 `roslaunch rosaria_client rosaria.launch` (or something like that)
 
 https://www.youtube.com/watch?v=gJz-MWn7jhE
+
+Creación del mapa 2D
+`rosrun gmapping slam_gmapping scan:= (topic)`
+`rosrun map_server map_saver -f <map_name>`
+http://wiki.ros.org/slam_gmapping/Tutorials/MappingFromLoggedData#record
+
+Calibrar camaras
+http://wiki.ros.org/camera_calibration
+http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration
+
+Navegación
+http://wiki.ros.org/navigation/Tutorials/RobotSetup
