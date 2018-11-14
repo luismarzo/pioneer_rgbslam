@@ -57,7 +57,7 @@ Use laserscan
 
 
 For odometry use Rosaria
-`roslaunch rosaria_client rosaria.launch` (or something like that)
+`roslaunch rosaria_client rosaria_client_launcher.launch` (or something like that)
 
 https://www.youtube.com/watch?v=gJz-MWn7jhE
 
@@ -72,3 +72,14 @@ http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration
 
 Navegación
 http://wiki.ros.org/navigation/Tutorials/RobotSetup
+
+
+
+
+https://github.com/danimtb/pioneer3at_ETSIDI
+https://sites.google.com/site/slamnavigation/
+http://wiki.ros.org/p2os/Tutorials/Getting%20Started%20with%20p2os
+http://wiki.ros.org/navigation/Tutorials/Using%20rviz%20with%20the%20Navigation%20Stack
+
+
+

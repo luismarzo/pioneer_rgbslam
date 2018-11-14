@@ -2,7 +2,7 @@
 <launch>
 
 	<node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pointcloud_to_laserscan">
-
+		<param name="output_frame_id" value="/camera_link"/>
 		<remap from="cloud_in" to="/camera/depth_registered/points"/>
 		<remap from="scan" to ="/camera/scan"/>
 <rosparam>

@@ -15,9 +15,13 @@ find_package(catkin REQUIRED COMPONENTS
   rtabmap_ros
   sensor_msgs
   move_base
-  my_odom_configuration_dep
-  my_sensor_configuration_dep
-  my_tf_configuration_dep
+  move_base_msgs
+  actionlib
+  roscpp
+  rospy
+  tf
+  geometry_msgs
+  genmsg
 )
 
 ## System dependencies are found with CMake's conventions
@@ -204,3 +208,14 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+add_executable(simple_navigation_goals src/simple_navigation_goals.cpp)
+target_link_libraries(simple_navigation_goals ${catkin_LIBRARIES})
+
+add_executable(tf_broadcaster src/tf_broadcaster.cpp)
+add_executable(tf_listener src/tf_listener.cpp)
+target_link_libraries(tf_broadcaster ${catkin_LIBRARIES})
+target_link_libraries(tf_listener ${catkin_LIBRARIES})
+
+add_executable(remap_subscriber src/remap_subscriber.cpp)
+target_link_libraries(remap_subscriber ${catkin_LIBRARIES})
+add_dependencies(remap_subscriber remap_subscriber_generate_messages_cpp)
