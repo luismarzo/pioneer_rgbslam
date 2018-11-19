@@ -1,0 +1,26 @@
+<launch>
+
+
+  <include file="$(find p2os_urdf)/launch/pioneer3at_urdf.launch"/>
+    <include file="$(find p3at_slam)/launch/to_laserscan.launch"/>
+
+
+<!-- start sensor-->
+<include file="$(find freenect_launch)/launch/freenect.launch"/>
+
+<!-- Launch kinect and depthimage_to_laser node -->
+  <include file="$(find p3at_slam)/sensors/kinect_to_laser_low.launch"/>
+
+<!-- Launch kinect and depthimage_to_laser node -->
+  <include file="$(find p3at_slam)/sensors/kinect_to_laser.launch"/>
+
+<!-- Starting rosaria driver for motors and encoders -->
+  <include file="$(find p3at_slam)/sensors/rosaria.launch"/>
+
+  <node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="-0.2 0 0.390 3.141592 0 0 base_link camera/scan 1" />
+  <node pkg="tf" type="static_transform_publisher" name="base_to_camera_broadcaster" args="0.020 0 0.375 0 0 0 base_link camera_link 1" />
+  <node pkg="tf" type="static_transform_publisher" name="map_to_odom" args="0.0 0.0 0.0 0 0 0.0 /map /odom 1000"/>
+  
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find p3at_slam)/rviz/move_base.rviz"/>
+
+</launch>

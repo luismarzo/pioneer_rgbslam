@@ -1,0 +1,21 @@
+#camera calibration
+image_width: 640
+image_height: 480
+camera_name: narrow_stereo
+camera_matrix:
+  rows: 3
+  cols: 3
+  data: [524.259981, 0, 313.660437, 0, 522.694781, 259.927783, 0, 0, 1]
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data: [0.130079, -0.234177, -0.000245, -0.001421, 0]
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+projection_matrix:
+  rows: 3
+  cols: 4
+  data: [532.7569580000001, 0, 312.646699, 0, 0, 532.436584, 259.874327, 0, 0, 0, 1, 0]

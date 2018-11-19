@@ -53,33 +53,31 @@ Install freenect, rtabmap and use it:
 `rviz`
 
 Use laserscan
-`roslaunch to_laserscan.launch`
+`roslaunch slam to_laserscan_scan.launch`
 
 
 For odometry use Rosaria
 `roslaunch rosaria_client rosaria_client_launcher.launch` (or something like that)
 
-https://www.youtube.com/watch?v=gJz-MWn7jhE
 
-Creación del mapa 2D
+2D map
 `rosrun gmapping slam_gmapping scan:= (topic)`
 `rosrun map_server map_saver -f <map_name>`
 http://wiki.ros.org/slam_gmapping/Tutorials/MappingFromLoggedData#record
 
-Calibrar camaras
+Camera calibration
 http://wiki.ros.org/camera_calibration
 http://wiki.ros.org/camera_calibration/Tutorials/MonocularCalibration
 
-Navegación
+Navigation
 http://wiki.ros.org/navigation/Tutorials/RobotSetup
 
-
-
-
+Others
 https://github.com/danimtb/pioneer3at_ETSIDI
-https://sites.google.com/site/slamnavigation/
-http://wiki.ros.org/p2os/Tutorials/Getting%20Started%20with%20p2os
 http://wiki.ros.org/navigation/Tutorials/Using%20rviz%20with%20the%20Navigation%20Stack
+https://github.com/rosbook/effective_robotics_programming_with_ros
 
 
-
+## In order to use it:
+`roslaunch p3at_slam pioneer3at-rosaria.launch`
+`roslaunch p3at_slam global_navigation_p3at.launch`

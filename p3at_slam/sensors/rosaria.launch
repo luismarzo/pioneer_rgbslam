@@ -1,0 +1,17 @@
+<launch>
+
+<!-- Starting rosaria driver for motors and encoders -->
+  <node name="rosaria" pkg="rosaria" type="RosAria">
+  <rosparam>
+      TicksMM: 166
+      RevCount: 37350
+      DriftFactor: 0
+      trans_accel: 0
+      trans_decel: 0
+      rot_accel: 0
+      rot_decel: 0
+  </rosparam>
+  <remap from="~cmd_vel" to="cmd_vel"/>
+  </node>
+
+</launch>
