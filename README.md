@@ -46,8 +46,11 @@ First install Kinect on ROS kinetic[https://www.reddit.com/r/ROS/comments/6qejy0
 `catkin_make`
 `catkin_make install`
 
-Install Aria
-https://web.archive.org/web/20180205212122/http://robots.mobilerobots.com/wiki/Aria
+Change the ermisions in the port to use ARIA
+
+`cd /dev`
+`sudo chmod 777 ttyUSB0`
+
 
 Install freenect, rtabmap and use it:
 
@@ -56,6 +59,7 @@ Install freenect, rtabmap and use it:
 `rviz`
 
 Use laserscan
+`sudo apt-get install ros-kinetic-pointcloud-to-laserscan`
 `roslaunch slam to_laserscan_scan.launch`
 
 
@@ -79,6 +83,22 @@ Others
 https://github.com/danimtb/pioneer3at_ETSIDI
 http://wiki.ros.org/navigation/Tutorials/Using%20rviz%20with%20the%20Navigation%20Stack
 https://github.com/rosbook/effective_robotics_programming_with_ros
+
+## Raspberry pi
+
+Add memory swap for building packages
+https://digitizor.com/create-swap-file-ubuntu-linux/
+
+Enable wifi Ubuntu Mate
+	Step 1: Open terminal
+	Step 2: type this code "sudo nano /etc/NetworkManager/NetworkManager.conf"
+
+	You will be directed to edit what's in the NetworkManager.conf
+	Step 3: Change the "false" to "true" and save it and close the nano
+	Step 4: type this code "sudo service network-manager restart
+	
+Install Aria
+https://web.archive.org/web/20180205212122/http://robots.mobilerobots.com/wiki/Aria
 
 
 ## In order to use it:
