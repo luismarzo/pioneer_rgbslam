@@ -46,6 +46,9 @@ First install Kinect on ROS kinetic[https://www.reddit.com/r/ROS/comments/6qejy0
 `catkin_make`
 `catkin_make install`
 
+Install Aria
+https://web.archive.org/web/20180205212122/http://robots.mobilerobots.com/wiki/Aria
+
 Install freenect, rtabmap and use it:
 
 `roslaunch freenect_launch freenect.launch depth_registration:=true`
