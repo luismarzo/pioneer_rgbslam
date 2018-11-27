@@ -100,6 +100,12 @@ Enable wifi Ubuntu Mate
 Install Aria
 https://web.archive.org/web/20180205212122/http://robots.mobilerobots.com/wiki/Aria
 
+Export ROSMASTER (write in .basrc inside the raspberry)
+export ROS_MASTER_URI=http://Luis:11311
+
+Connect via ssh (you have to enable ssh and not be connected to eduroam)
+ssh luisraspi@luispi.local
+
 
 ## In order to use it:
 `roslaunch p3at_slam pioneer3at-rosaria.launch`
