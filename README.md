@@ -104,7 +104,7 @@ Export ROSMASTER (write in .basrc inside the raspberry)
 export ROS_MASTER_URI=http://Luis:11311
 
 Connect via ssh (you have to enable ssh and not be connected to eduroam)
-ssh luisraspy@luispi.local
+	ssh luisraspy@luispi.local
 
 You always have to give permisions to ttyUSB0
 	cd /dev
