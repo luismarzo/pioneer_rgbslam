@@ -105,6 +105,9 @@ In this page, download ARIA 2.9.4 - Ubuntu 16.04 (xenial) or later, amd 64-bit a
 `make clean`
 `make`
 
+Later, if you have problems doing catkin_make in your package and appear "Error: Aria.h not found", try using this
+`catkin_make --force-cmake`
+
 if you have problems with "make", install this 
   ` sudo apt-get install build-essential software-properties-common -y`
  `  sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y `
@@ -133,6 +136,7 @@ Export ROSMASTER (write in .basrc inside the raspberry)
 
 Connect via ssh (you have to enable ssh and not be connected to eduroam)
 	`ssh luisraspy@luispi.local`
+	`ssh luis@luis-desktop.local`
 
 You always have to give permisions to ttyUSB0
 	`cd /dev`
